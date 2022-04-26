@@ -61,8 +61,8 @@
                                 <rule>
                                     <limits>
                                         <limit>
-                                            <counter>LINE</counter>
-                                            <value>COVEREDRATIO</value>
+                                            <counter>INSTRUCTION</counter>
+                                            <value>COVERED-RATIO</value>
                                             <minimum>100%</minimum>
                                         </limit>
                                     </limits>
@@ -76,4 +76,4 @@
     </build>
 
 
-        </project>
+</project>
