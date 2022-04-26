@@ -28,9 +28,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
-                <configuration>
-                    <failIfNoTests>true</failIfNoTests>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -53,6 +50,7 @@
                     </execution>
                     <execution>
                         <id>check</id>
+                        <phase>verify</phase>
                         <goals>
                             <goal>check</goal>
                         </goals>
@@ -61,11 +59,12 @@
                 <configuration>
                     <rules>
                         <rule>
+                            <element>BUNDLE</element>
                             <limits>
                                 <limit>
                                     <counter>lINE</counter>
                                     <value>COVEREDRATIO</value>
-                                    <minimum>100%</minimum>
+                                    <minimum>1.0</minimum>
                                 </limit>
                             </limits>
                         </rule>
@@ -74,6 +73,4 @@
             </plugin>
         </plugins>
     </build>
-
-
 </project>
